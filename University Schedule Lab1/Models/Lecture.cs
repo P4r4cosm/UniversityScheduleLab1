@@ -8,8 +8,10 @@ public class Lecture
     
     [Required]public string Name {get; set;}
     
-    public bool Requirments {get; set;}
-    
-    public int CourceId {get; set;}
+    public bool Requirements {get; set;}
+
+    [Range(1900, 2100, ErrorMessage = "Year must be between 1900 and 2100")] 
+    public int Year { get; set; }
+    public int CourseId {get; set;}
     public Course Course {get; set;}
 }
